@@ -1,9 +1,9 @@
 import streamlit as st
-import pickle
 import numpy as np
 
 # Load trained model
-model = pickle.load(open("model.pkl", "rb"))
+import joblib
+model = joblib.load("model.pkl")
 
 # ---------------- UI ---------------- #
 
@@ -38,3 +38,4 @@ if st.sidebar.button("🚀 Predict Risk"):
     else:
         st.success("✅ Patient is Safe")
         st.write("No immediate high-risk indicators detected.")
+
