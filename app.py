@@ -80,7 +80,7 @@ if st.sidebar.button("🚀 Predict Risk"):
 st.markdown("---")
 st.subheader("📊 Data Visualization Dashboard")
 
-if st.checkbox("Show Visualizations"):
+if st.checkbox("Show Visualizations", key="viz_btn"):
 
     # 1️⃣ Target Distribution
     st.write("### Target Distribution")
